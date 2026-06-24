@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1782271863.3827 "c:/Users/billy/OneDrive/Documentos/Pre_Projeto_TCC/conference_101719.tex" "conference_101719.pdf" "conference_101719" 1782271864.7036 2
+["pdflatex"] 1782271991.02728 "c:/Users/billy/OneDrive/Documentos/Pre_Projeto_TCC/conference_101719.tex" "conference_101719.pdf" "conference_101719" 1782271992.36967 0
   "IEEEtran.cls" 1782271322 281995 6e87d17cc790bfd345d9b49eed602525 ""
-  "c:/Users/billy/OneDrive/Documentos/Pre_Projeto_TCC/conference_101719.tex" 1782271863 37465 a16498fda910ab8a430c5c952da92a4e ""
+  "c:/Users/billy/OneDrive/Documentos/Pre_Projeto_TCC/conference_101719.tex" 1782271990 37463 fc47e403a05a7b25b619599c2c4c2a68 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1760537437 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1760537878 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1760540966 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -31,6 +31,14 @@
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1760536915 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1760536915 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1760536915 1120 8b7d695260f3cff42e636090a8002094 ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1760536060 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1760536060 35752 024fb6c41858982481f6968b5fc26508 ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1760536060 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1760536060 32716 08e384dc442464e7285e891af9f45947 ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1760540966 44729 fea0975e20ec51c992338362f05f1146 ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb" 1760540966 44656 0cbca70e0534538582128f6b54593cca ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1760540966 46026 687528a208fbfc1f00832bb96cccebbb ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1760540966 45458 504e2b06fa82109d168c7a0afb09e145 ""
   "c:/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf" 1760540966 1372 788387fea833ef5963f4c5bffe33eb89 ""
   "c:/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmbi7t.vf" 1760540966 1384 6ac0f8b839230f5d9389287365b243c0 ""
   "c:/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf" 1760540966 1380 0ea3a3370054be6da6acd929ec569f06 ""
@@ -71,8 +79,8 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1760541703 5574153 af86687748baf417d9e7d549313527be ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1760541960 3629002 6f29aac20c8905bcf80a63bf928b0951 ""
   "c:/texlive/2025/texmf.cnf" 1760541669 713 e69b156964470283e0530f5060668171 ""
-  "conference_101719.aux" 1782271864 3742 b60d580e394a87f634b9d49bd5db3376 "pdflatex"
-  "conference_101719.tex" 1782271863 37465 a16498fda910ab8a430c5c952da92a4e ""
+  "conference_101719.aux" 1782271992 3766 f967bf2a87a9247aa982c8cb26ab8aa5 "pdflatex"
+  "conference_101719.tex" 1782271990 37463 fc47e403a05a7b25b619599c2c4c2a68 ""
   (generated)
   "conference_101719.aux"
   "conference_101719.log"
