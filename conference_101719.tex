@@ -11,10 +11,11 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Conference Paper Title*\\
-{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
-should not be used}
-\thanks{Identify applicable funding agency here. If none, delete this.}
+\title{Algoritmo de busca para Identificação de rotas entre ativos na zeladoria pública no contexto
+de cidades inteligentes\\
+{\footnotesize \textsuperscript{*}IA para o Bem: Inteligência Artificial aplicada a problemas sociais (Saúde,
+Educação, Meio Ambiente, Cidades Inteligentes, etc.), IA e Ética e Explicabilidade em Inteligência Artificial}
+\thanks{}
 }
 
 \author{\IEEEauthorblockN{Billy Grahan Alves Rodrigues}
@@ -59,16 +60,22 @@ should not be used}
 \maketitle
 
 \begin{abstract}
-    RESUMO
-    Um dos desafios da administração pública é a gestão eficiente de
-    ativos públicos de uso comum no
-    contexto de zeladoria urbana.  Esse trabalho consiste em identificar uma
-    alternativa capaz de auxiliar os profissionais da
-    gestão pública no gerenciamento dos ativos nas cidades.
-    A Proposta se alinha ao conceito de
-    cidades inteligentes, provando que municípios menores podem modernizar
-    sua gestão e superar limitações orçamentárias através da otimização
-    matemática.
+    A gestão eficiente de ativos públicos municipais é um desafio logístico para as administrações
+    públicas, especialmente quando demanda visitas periódicas para inspeção e manutenção
+    desses mesmos ativos distribuídos na cidade. Diante desta problematica,
+    o objetivo geral desse trabalho consiste em identificar uma alternativa capaz de encontrar rotas
+    eficientes entre os ativos publicos aplicando o Problema do Caixeiro Viajante ao contexto da
+    gestão pública municipal. Foi realizada uma revisão sistemática da literatura para identificar
+    as principais abordagens metodológicas e algoritmos utilizados em problemas de otimização
+    de rotas em ambientes urbanos. A metodologia foi planejada caracterizando o problema, a iden-
+    tificação de técnicas heurísticas adequadas e a análise comparativa de algoritmos com
+    dados de ativos municipais. No resultado espera-se identificar uma solução viável para otimização de rotas aplicando
+    tecnicas de otimização para redução de custos operacionais e economia de tempo de deslocamento.
+    A proposta se alinha ao conceio de cidades inteligentes,
+    buscando evidenciar que a otimização de rotas constitui ferramenta estratégica
+    para maximizar a eficiência operacional da administração pública,
+    promovendo maior agilidade no atendimento às demandas de zeladoria urbana e
+    fortalecendo a qualidade dos serviços municipais mesmo com restrições orçamentárias.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -80,29 +87,27 @@ should not be used}
 
 \section{Introduction}
 A gestão e a manutenção de ativos públicos, como praças, escolas
-e equipamentos urbanos distribuídos
-pela cidade impõem um desafio logístico às prefeituras.
-No cenário das cidades inteligentes, a falta de um planejamento
+e equipamentos urbanos distribuídos na cidade, consiste em controlar, inventariar e manter
+os recursos e serviços acessíveis à sociedade, impõem um desafio logístico às prefeituras.
+No cenário das cidades inteligentes, que são ambientes urbanos que utilizam Tecnologias
+da Informação e Comunicação (TIC) para melhorar a infraestrutura, os serviços públicos e a
+qualidade de vida dos cidadãos \cite{WEISS2015}, a falta de um planejamento
 de rotas eficiente gera desperdício de combustível, custos
 operacionais elevados e lentidão no atendimento ao cidadão
 um gargalo para municípios menores que enfrentam forte
-restrição orçamentária (SANTIAGO, 2023) \cite{SANTIAGO2023}. O desafio central reside em encontrar a
+restrição orçamentária \cite{SANTIAGO2023}. O desafio central reside em encontrar a
 rota mais eficiente que permita às equipes técnicas visitar todos os pontos
 necessários e retornar à origem minimizando a distância e o tempo de
-deslocamento. O objetivo deste trabalho é obter um levantamento dos
-principais trabalhos sobre otimização de rotas e tecnicas
-empregadas no contexto urbano e cidades inteligentes,
-Identificar o Problema do Caixeiro Viajante e suas variantes
-contextualizando-o à gestão pública e Identificar um algoritmo
-heurístico mais adequado para a realidade das prefeituras.
+deslocamento. o objetivo deste trabalho consiste em identificar o Problema
+do Caixeiro Viajante(PCV) e suas variantes
+contextualizando-o à gestão pública, desenvolver
+e avaliar um algoritmo capaz de gerar rotas otimizadas para a visitação de ativos públicos
+por profissionais da administração municipal mais adequado para a realidade das prefeituras.
 Do ponto de vista técnico, o trabalho se propões a resolver
 um problema complexo ($NP$-difícil) através
-de heurísticas para entregar soluções rápidas e viáveis.
-Economicamente, a otimização pode reduzir gastos
-públicos com combustível e manutenção de frotas. Socialmente,
-diminuir o tempo de resposta às demandas da população, tornando
+de heurísticas para entregar soluções rápidas, viáveis economicamente reduzindo custos e
+diminuindo o tempo de resposta às demandas da população, tornando
 os serviços urbanos mais ágeis.
-
 
 
 % \begin{itemize}
@@ -131,131 +136,170 @@ os serviços urbanos mais ágeis.
 % Fundamentação Teórica -----------------------------------------------------------------------
 
 \section{Fundamentação Teórica}
-Nesta seção serão abordandos os seguintes temas: cidades inteligentes, gestão de ativos
-públicos, zeladoria urbana, e os algoritmos de busca.
+Nesta seção serão abordandos os seguintes temas: gestão de ativos publicos,
+zeladoria urbana, cidades inteligentes,
+e os algoritmos de busca.
+A zeladoria urbana aborda um conjunto de atividades que visam manter em boas
+condições de uso os ambientes públicos para a população, realizando serviços essenciais de
+manutenção e conservação. Em cidades de pequeno porte, especialmente no interior dos
+estados do Nordeste brasileiro, é possível encontrar desafios como: limitações operacionais, de
+infraestrutura e recursos humanos especializados \cite{SANTOS2019}.
+Os ativos públicos são recursos, direitos e serviços que são acessíveis e disponíveis
+para todos os membros de uma sociedade, com diversas finalidades,
+e a boa gestão de ativos reduzem erros operacionais, previnem
+retrabalhos e promovem melhor uso dos recursos públicos \cite{STORCK2017}.
+E cidades inteligentes que tem como objetivo melhorar a infraestrutura urbana,
+a utilização inteligente dos recursos, a mobilidade, a
+governança e os serviços públicos, tendo como principal beneficiado o cidadão \cite{WEISS2015}.
+Na otimização de rotas, algoritmos de busca exploram grafos, que são
+representações da malha viaria de uma cidade, para encontrar
+caminhos eficientes entre locais utilizando diferentes estratégias. A Busca em
+Largura (BFS), por exemplo, explora o grafo nível por nível a partir da origem,
+sendo ideal para encontrar o menor caminho, enquanto a Busca em Profundidade (DFS)
+vai o mais fundo possível em um caminho antes de retroceder \cite{CORMEN2012}.
+Quando o grafo possui pesos, que é a distancia definida entre pontos no grafo
+, a Busca de Custo Uniforme (UCS) garante o
+caminho mais curto ao expandir sempre o nó com o menor custo acumulado
+até o momento; E o Algoritmo A* (A Estrela) utiliza uma abordagem otimizada
+que acelera a busca pelo caminho mínimo ao combinar o custo acumulado a
+uma função heurística que estima a distância restante até o destino \cite{CORMEN2012}.
 
-\subsection{Cidades inteligentes}
-O conceito de cidades inteligentes (smart cities) refere-se a
-ambientes urbanos que utilizam Tecnologias da Informação e Comunicação (TIC)
-para otimizar a infraestrutura, os serviços públicos e a gestão de recursos,
-focando sempre no bem-estar do cidadão (WEISS et al., 2015) \cite{WEISS2015}.
-% Embora seja um conceito muito associado 
-% a grandes metrópoles, ele pode ser adaptado a pequenos e médios
-% municípios por meio da automação, monitoramento e participação da população.
-sendo Governança Inteligente, Mobilidade Urbana Inteligente e Urbanismo e
-Planejamento Urbano os três pilares que sustentam a ideia de cidades inteligentes.
 
-% \subsubsection{Governança Inteligente}
-% Governança Inteligente Envolve o uso de ferramentas digitais e plataformas de 
-% dados para promover a transparência, a participação do cidadão e a eficiência 
-% administrativa. Permite que os gestores tomem decisões estratégicas baseadas em 
-% dados reais, o que é fundamental para cenários com restrições orçamentárias.  
+% \subsection{Métodos de otimização}
+% Problemas de otimização buscam encontrar a melhor solução viável
+% dentro de um conjunto de alternativas possíveis, baseando-se em
+% um critério específico, como no planejamento de rotas \cite{CORMEN2012}. Os métodos
+% para resolvê-los dividem-se em diferentes categorias, cada uma apresentando
+% características, vantagens e limitações computacionais próprias para lidar
+% com a complexidade do problema. São exemplos: Métodos Exatos, Heurísticas, Meta-heurísticas.
 
-% \subsubsection{Mobilidade Urbana Inteligente}
-% Mobilidade Urbana Inteligente Integra sistemas de geolocalização, análise de 
-% dados e algoritmos para otimizar os fluxos de deslocamento na malha viária. 
-% Utiliza soluções que variam de sistemas inteligentes de tráfego até o uso de 
-% aprendizado de máquina para mapear padrões de movimentação urbana e propor rotas 
-% alternativas eficientes.  
+% \subsection{Teoria dos Grafos}
+% Um grafo $G = (V, E)$ é uma estrutura matemática que modela conexões
+% ($E$) entre nós ($V$), sendo ideal para representar mapas e redes urbanas \cite{CORMEN2012}.
+% % Eles podem ser não-direcionados (mão dupla) ou direcionados (mão única), e 
+% % frequentemente recebem pesos nas arestas para indicar distâncias ou tempos
+% % de deslocamento. 
+% % Computacionalmente, são representados por Matrizes de Adjacência 
+% % (ideais para grafos densos) ou Listas de Adjacência (eficientes para grafos esparsos).
 
-% \subsubsection{Urbanismo e Planejamento Urbano}
-% Urbanismo e Planejamento Urbano Aplica geotecnologias, modelagem espacial e 
-% ferramentas colaborativas para gerenciar o território. Exemplos incluem o uso 
-% de City Information Modeling (CIM) e aplicativos onde a própria população relata 
-% problemas urbanos, facilitando o mapeamento de demandas e a tomada de decisão antes 
-% de intervenções físicas no espaço urbano. 
+% \subsection{Algoritmos de Busca}
+% Na otimização de rotas, algoritmos de busca exploram grafos para encontrar
+% caminhos eficientes entre nós.
+% \begin{itemize}
+%     \item Busca em Largura (BFS): Explora o grafo nível por nível a partir da origem,
+%           sendo ideal para encontrar o menor caminho \cite{CORMEN2012}.
 
-\subsection{Gestão de ativos públicos}
-A Gestão de ativos públicos consiste nas práticas para controlar, inventariar e manter
-os recursos e serviços acessíveis à sociedade.
-Em cidades inteligentes, esse gerenciamento utiliza
-geolocalização, sensores IoT e inventários digitais
-para acompanhar o estado do patrimônio em tempo real (SANTIAGO, 2023) \cite{SANTIAGO2023}.
-Essa automação reduz erros operacionais (STORCK et al., 2017) \cite{STORCK2017} e otimiza a tomada
-de decisões, sendo estratégica para para a melhoria contínua dos serviços públicos
-(OLIVEIRA, 2020) \cite{OLIVEIRA2020}.
+%     \item Busca em Profundidade (DFS): Explora um caminho o mais fundo possível
+%           antes de retroceder (backtracking), sendo útil para verificar conectividade e ciclos \cite{CORMEN2012}.
 
-\subsection{Zeladoria Urbana}
-A zeladoria Urbana abrange os serviços essenciais de conservação e manutenção
-do espaço urbano.
-% Em municípios de pequeno porte, especialmente 
-% no interior do Nordeste, essas atividades sofrem com a falta de 
-% automação e com limitações de recursos humanos e infraestrutura, 
-% o que prejudica o planejamento e a transparência (SANTOS et al., 2019). 
-aplicativos móveis onde os
-cidadãos reportam problemas em tempo real (SANTOS et al., 2019) \cite{SANTOS2019} com sistemas de gestão
-e priorização inteligente, transformando o atendimento de
-demandas em um fluxo logístico eficiente, transparente e econômico Ajudam a
-resolver esse problema (OLIVEIRA, 2020).
+%     \item Busca de Custo Uniforme (UCS): Expande sempre o nó com o menor custo
+%           acumulado até o momento, garantindo o caminho mais curto em grafos com pesos \cite{CORMEN2012}.
 
-\subsection{Métodos de otimização}
-Problemas de otimização buscam encontrar a melhor solução viável
-dentro de um conjunto de alternativas possíveis, baseando-se em
-um critério específico, como no planejamento de rotas \cite{CORMEN2012}. Os métodos
-para resolvê-los dividem-se em diferentes categorias, cada uma apresentando
-características, vantagens e limitações computacionais próprias para lidar
-com a complexidade do problema. São exemplos: Métodos Exatos, Heurísticas, Meta-heurísticas.
-
-\subsection{Teoria dos Grafos}
-Um grafo $G = (V, E)$ é uma estrutura matemática que modela conexões
-($E$) entre nós ($V$), sendo ideal para representar mapas e redes urbanas \cite{CORMEN2012}.
-% Eles podem ser não-direcionados (mão dupla) ou direcionados (mão única), e 
-% frequentemente recebem pesos nas arestas para indicar distâncias ou tempos
-% de deslocamento. 
-% Computacionalmente, são representados por Matrizes de Adjacência 
-% (ideais para grafos densos) ou Listas de Adjacência (eficientes para grafos esparsos).
-
-\subsection{Algoritmos de Busca}
-Na otimização de rotas, algoritmos de busca exploram grafos para encontrar
-caminhos eficientes entre nós.
-\begin{itemize}
-    \item Busca em Largura (BFS): Explora o grafo nível por nível a partir da origem,
-          sendo ideal para encontrar o menor caminho \cite{CORMEN2012}.
-
-    \item Busca em Profundidade (DFS): Explora um caminho o mais fundo possível
-          antes de retroceder (backtracking), sendo útil para verificar conectividade e ciclos \cite{CORMEN2012}.
-
-    \item Busca de Custo Uniforme (UCS): Expande sempre o nó com o menor custo
-          acumulado até o momento, garantindo o caminho mais curto em grafos com pesos \cite{CORMEN2012}.
-
-    \item Algoritmo A (A Estrela):* Combina o custo acumulado com uma função heurística
-          que estima a distância restante, acelerando a busca pelo caminho mínimo \cite{CORMEN2012}.
-\end{itemize}
+%     \item Algoritmo A (A Estrela):* Combina o custo acumulado com uma função heurística
+%           que estima a distância restante, acelerando a busca pelo caminho mínimo \cite{CORMEN2012}.
+% \end{itemize}
 
 % Revisão de Literatura -----------------------------------------------------------------------
 
 \section{Revisão de Literatura}
-Nesse Capítulo serão revisados os trabalhos focados em otimização de rotas e
-cidades inteligentes, estruturada em duas Questões de Pesquisa (QP) focadas
-em identificar as estratégias metodológicas (QP1) e os algoritmos utilizados
-(QP2). A busca utilizou palavras-chave combinadas "cidades inteligentes", "framework",
-"problema do caixeiro viajante" no Google Acadêmico, Periódicos
-CAPES e SBC-OpenLib, aplicando critérios rígidos de inclusão (como estudos
-completos de 2015 a 2025) e exclusão.
+Diante do objetivo do trabalho, foi necessário a realização de uma revisão sistemática
+para identificar os principais trabalhos relacionados com essa pesquisa, que consiste em:
+Definição das Questões de Pesquisa(QP); definição da string
+de busca; definição das bases de dados e definição dos critérios de inclusão e exclusão.
+Sendo planejadas as QPs, quais estrategias adotadas nos trabalhos(QP1)
+e Quais os algoritmos adotados nos rabalhos(QP2).
+Bem como a string de busca, que consistiu na combinação
+das palavras-chave "cidades inteligentes", "framework" e "problema do caixeiro viajante"
+nas bases de dados Google Acadêmico, Periódicos CAPES e SBC-OpenLib.
+Para concluir o planejamento, foram estabelecidos os critérios de
+seleção dos artigos. Serão incluídos estudos completos e acessíveis
+eletronicamente,
+% publicados entre 2015 e 2025,
+publicados o mais proximo e até 2025,
+sejam teóricos ou experimentais,
+desde que alinhados ao problema de pesquisa. Em contrapartida, serão excluídos
+artigos duplicados, indisponíveis para download, não avaliados por pares
+(como tutoriais e relatórios técnicos) ou que não respondam às questões e ao escopo do estudo.
+A tabela \ref{tab:mapeamento_qp} apresenta o mapeamento dos trabalhos selecionados.
+E para fins de concisão, as abordagens da QP1
+foram categorizadas em: Desenvolvimento de Algoritmos (Alg.), para os trabalhos
+\cite{PAZ2023, VILLELA2017, CHAVES2007, SILVA2022};
+Criação de Framework (Frw.), \cite{SILVA2022}; Internet das Coisas (IoT),
+\cite{BARTH2016}; Simulação (Sim.), \cite{SATI2020};
+e Análise de Dados (Dados), \cite{GEORGES2014}. 
+Já na QP2, destacam-se tanto abordagens
+clássicas e heurísticas próprias (como Algoritmo Genético,
+Colônia de Formigas, GRASP, A*, Dijkstra(Dijks) e Programação Linear)
+quanto o uso exclusivo de ferramentas e APIs externas de modelagem.
+No desenvolvimento de algoritmos e heurísticas,
+\cite{PAZ2023} propôs uma análise comparativa utilizando Algoritmo Genético,
+Colônia de Formigas, GRASP, $A^*$ e Dijkstra para otimizar trajetos urbanos
+em menor tempo. Focados em variantes do PCV, \cite{VILLELA2017} aplicou Algoritmo
+Genético ao problema do Caixeiro Alugador, enquanto \cite{CHAVES2007} desenvolveu
+uma heurística híbrida baseada em GRASP para o PCV com Coleta de Prêmios. Em
+contrapartida, soluções baseadas em ferramentas e APIs externas foram adotadas
+por \cite{SILVA2024}, que criou um framework de integração de rotas, e por
+\cite{SILVA2022}, que resolveu o PCV clássico voltado à logística de entregas
+postais. Por fim, expandindo o escopo para outras estratégias, \cite{BARTH2016}
+aplicou Colônia de Formigas no planejamento de infraestrutura de redes para cidades
+inteligentes via IoT; \cite{SATI2020} utilizou simulação por Programação Linear
+para transporte de funcionários; e \cite{GEORGES2014} realizou uma análise de dados
+baseada no modelo conceitual do PCV para reordenar pontos de coleta seletiva.
+Esta revisão forneceu subsídios importantes para o desenvolvimento do presente
+trabalho, orientando tanto a escolha da abordagem metodológica quanto a seleção de técnicas de
+otimização adequadas ao problema proposto.
 
-Após inserir a string de busca nas bases,
-foram retornados 39 resultados iniciais, resultando no download
-de 22 artigos. Após a aplicação dos critérios de filtragem, 8 trabalhos
-foram selecionados para análise final.
+\begin{table}[htbp]
+    \caption{Mapeamento dos Trabalhos Selecionados (QP1 e QP2)}
+    \label{tab:mapeamento_qp}
+    \centering
+    \begin{tabular}{lll}
+        \textbf{Autor(es)} & \textbf{QP1 (Estratégia)} & \textbf{QP2 (Algoritmos / Ferramentas)} \\
 
-\subsection{Resultados}
-Nas Questões de Pesquisa (QP1 e QP2) foram identificadas as seguintes tendências:
-\begin{itemize}
-    \item Estratégias (QP1): O desenvolvimento ou uso de algoritmos de otimização
-          de rotas foi a abordagem predominante (4 trabalhos), seguida por iniciativas
-          isoladas de criação de frameworks, simulações, análise de dados e internet das coisas.
+        \cite{PAZ2023}     & Alg.                      & Genético, Formigas, GRASP, A*, Dijks    \\
+        \cite{SILVA2024}   & Frw.                      & APIs externas                           \\
+        \cite{SILVA2022}   & Alg.                      & Ferramentas de código aberto            \\
+        \cite{VILLELA2017} & Alg.                      & Algoritmo Genético                      \\
+        \cite{CHAVES2007}  & Alg.                      & Heurística híbrida (GRASP)              \\
+        \cite{BARTH2016}   & IoT                       & Colônia de Formigas                     \\
+        \cite{SATI2020}    & Sim.                      & Programação Linear                      \\
+        \cite{GEORGES2014} & Dados                     & Modelo conceitual e ferramentas         \\
+    \end{tabular}
+\end{table}
 
-    \item Algoritmos (QP2): Destacaram-se o uso de Algoritmos Genéticos,
-          Colônia de Formigas, GRASP e Programação Linear para resolver variantes
-          do Problema do Caixeiro Viajante (PCV). Três estudos optaram por não
-          implementar algoritmos do zero, utilizando ferramentas e APIs prontas
-          (como OR-Tools e OpenStreetMap).
-\end{itemize}
 
-O mapeamento validou a viabilidade prática da pesquisa e forneceu
-embasamento metodológico para o projeto. A análise comparativa desses
-trabalhos servirá como referencial para avaliar o desempenho do algoritmo
-que será proposto para a zeladoria pública.
+
+% Nesse Capítulo serão revisados os trabalhos focados em otimização de rotas e
+% cidades inteligentes, estruturada em duas Questões de Pesquisa (QP) focadas
+% em identificar as estratégias metodológicas (QP1) e os algoritmos utilizados
+% (QP2). A busca utilizou palavras-chave combinadas "cidades inteligentes", "framework",
+% "problema do caixeiro viajante" no Google Acadêmico, Periódicos
+% CAPES e SBC-OpenLib, aplicando critérios rígidos de inclusão (como estudos
+% completos de 2015 a 2025) e exclusão.
+
+% Após inserir a string de busca nas bases,
+% foram retornados 39 resultados iniciais, resultando no download
+% de 22 artigos. Após a aplicação dos critérios de filtragem, 8 trabalhos
+% foram selecionados para análise final.
+
+% \subsection{Resultados}
+% Nas Questões de Pesquisa (QP1 e QP2) foram identificadas as seguintes tendências:
+% \begin{itemize}
+%     \item Estratégias (QP1): O desenvolvimento ou uso de algoritmos de otimização
+%           de rotas foi a abordagem predominante (4 trabalhos), seguida por iniciativas
+%           isoladas de criação de frameworks, simulações, análise de dados e internet das coisas.
+
+%     \item Algoritmos (QP2): Destacaram-se o uso de Algoritmos Genéticos,
+%           Colônia de Formigas, GRASP e Programação Linear para resolver variantes
+%           do Problema do Caixeiro Viajante (PCV). Três estudos optaram por não
+%           implementar algoritmos do zero, utilizando ferramentas e APIs prontas
+%           (como OR-Tools e OpenStreetMap).
+% \end{itemize}
+
+% O mapeamento validou a viabilidade prática da pesquisa e forneceu
+% embasamento metodológico para o projeto. A análise comparativa desses
+% trabalhos servirá como referencial para avaliar o desempenho do algoritmo
+% que será proposto para a zeladoria pública.
 
 %  Metodologia -----------------------------------------------------------------------
 
@@ -288,24 +332,24 @@ Capítulo 2, sendo eles: Busca em Largura
 (BFS), Busca em Profundidade (DFS), Busca de Custo Uniforme (UCS) e
 Algoritmo A (A Estrela).
 
-\begin{algorithm}[t!]
-    \caption{Melhor Rota}
-    \label{alg:melhor-rota}
+% \begin{algorithm}[t!]
+%     \caption{Melhor Rota}
+%     \label{alg:melhor-rota}
 
-    \KwOut{Atualiza a melhor rota encontrada}
+%     \KwOut{Atualiza a melhor rota encontrada}
 
-    \BlankLine
+%     \BlankLine
 
-    \For{$i \gets 0$ \KwTo $\textit{iteracoes} - 1$}{
-        $\textit{melhor\_rota\_copia} \gets \textnormal{Gerar\_Solucao()}$\;
+%     \For{$i \gets 0$ \KwTo $\textit{iteracoes} - 1$}{
+%         $\textit{melhor\_rota\_copia} \gets \textnormal{Gerar\_Solucao()}$\;
 
-        \If{$\textit{melhor\_rota} = \emptyset$ \textbf{ou} $\textit{melhor\_rota\_copia}[-1][1] < \textit{melhor\_rota}[-1][1]$}{
-            $\textit{melhor\_rota} \gets \textit{melhor\_rota\_copia}$\;
-        }
-    }
-    \vspace{2mm}
-    \small{Fonte: Elaborado pelo autor (2025).}
-\end{algorithm}
+%         \If{$\textit{melhor\_rota} = \emptyset$ \textbf{ou} $\textit{melhor\_rota\_copia}[-1][1] < \textit{melhor\_rota}[-1][1]$}{
+%             $\textit{melhor\_rota} \gets \textit{melhor\_rota\_copia}$\;
+%         }
+%     }
+%     \vspace{2mm}
+%     \small{Fonte: Elaborado pelo autor (2025).}
+% \end{algorithm}
 
 \subsubsection{Mecanismo de Seleção Probabilística}
 A escolha do próximo ativo a ser visitado na construção da rota será
