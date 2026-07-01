@@ -1169,7 +1169,7 @@
   \oddsidemargin\@IEEEtrantmpdimenA
   \advance\oddsidemargin by -1in\relax
 \fi\fi\fi
-% odd and even side margins both mean "inner" for single sided pages
+% odd and even side margins both mean "inner" for single sided pages thebibliography
 \evensidemargin\oddsidemargin
 % but are mirrors of each other when twosided is in effect
 \if@twoside
@@ -4486,8 +4486,8 @@ between column types.}%
 \@IEEEcompsocconfonly{\def\IEEEbibitemsep{0.5\baselineskip plus 0.25\baselineskip minus 0.25\baselineskip}}
 
 
-\def\thebibliography#1{\section*{\refname}%
-    \addcontentsline{toc}{section}{\refname}%
+\def\thebibliography#1{\section*{Referências}%
+    \addcontentsline{toc}{section}{Referências}%
     % V1.6 add some rubber space here and provide a command trigger
     \footnotesize\vskip 0.3\baselineskip plus 0.1\baselineskip minus 0.1\baselineskip%
     \list{\@biblabel{\@arabic\c@enumiv}}%
