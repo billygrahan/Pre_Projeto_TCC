@@ -11,51 +11,63 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Algoritmo de busca para Identificação de rotas entre ativos na zeladoria pública no contexto
-de cidades inteligentes\\
-{\footnotesize \textsuperscript{*}IA para o Bem: Inteligência Artificial aplicada a problemas sociais (Saúde,
-Educação, Meio Ambiente, Cidades Inteligentes, etc.), IA e Ética e Explicabilidade em Inteligência Artificial}
-\thanks{}
+% \title{Algoritmo de busca para Identificação de rotas entre ativos na zeladoria pública no contexto
+% de cidades inteligentes\\
+% {\footnotesize \textsuperscript{*}IA para o Bem: Inteligência Artificial aplicada a problemas sociais (Saúde,
+% Educação, Meio Ambiente, Cidades Inteligentes, etc.), IA e Ética e Explicabilidade em Inteligência Artificial}
+% \thanks{}
+% }
+
+\title{\small\bfseries ALGORITMO DE BUSCA PARA IDENTIFICAÇÃO DE ROTAS ENTRE ATIVOS NA ZELADORIA PÚBLICA NO CONTEXTO DE CIDADES INTELIGENTES}
+
+\author{
+    \IEEEauthorblockN{\small\bfseries Billy Grahan Alves Rodrigues}
+    % \IEEEauthorblockA{Campus de Russas \\
+    %     Universidade Federal do Ceará (UFC) \\
+    %     Email: seu.email@engenharia.ufc.br}
+    \vspace{-0.5cm} % <-- ESSE COMANDO VAI PUXAR O TEXTO PARA CIMA, ECONOMIZANDO ESPAÇO
 }
 
-\author{\IEEEauthorblockN{Billy Grahan Alves Rodrigues}
-    \IEEEauthorblockA{}
-    % \author{\IEEEauthorblockN{1\textsuperscript{st} Billy grhan}
-    % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-    % \textit{name of organization (of Aff.)}\\
-    % City, Country \\
-    % email address or ORCID}
-    % \and
-    % \IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
-    % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-    % \textit{name of organization (of Aff.)}\\
-    % City, Country \\
-    % email address or ORCID}
-    % \and
-    % \IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
-    % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-    % \textit{name of organization (of Aff.)}\\
-    % City, Country \\
-    % email address or ORCID}
-    % \and
-    % \IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
-    % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-    % \textit{name of organization (of Aff.)}\\
-    % City, Country \\
-    % email address or ORCID}
-    % \and
-    % \IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
-    % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-    % \textit{name of organization (of Aff.)}\\
-    % City, Country \\
-    % email address or ORCID}
-    % \and
-    % \IEEEauthorblockN{6\textsuperscript{th} Given Name Surname}
-    % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-    % \textit{name of organization (of Aff.)}\\
-    % City, Country \\
-    % email address or ORCID}
-}
+\maketitle
+
+% \author{\IEEEauthorblockN{Billy Grahan Alves Rodrigues}
+%     \IEEEauthorblockA{}
+%     % \author{\IEEEauthorblockN{1\textsuperscript{st} Billy grhan}
+%     % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%     % \textit{name of organization (of Aff.)}\\
+%     % City, Country \\
+%     % email address or ORCID}
+%     % \and
+%     % \IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+%     % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%     % \textit{name of organization (of Aff.)}\\
+%     % City, Country \\
+%     % email address or ORCID}
+%     % \and
+%     % \IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
+%     % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%     % \textit{name of organization (of Aff.)}\\
+%     % City, Country \\
+%     % email address or ORCID}
+%     % \and
+%     % \IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
+%     % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%     % \textit{name of organization (of Aff.)}\\
+%     % City, Country \\
+%     % email address or ORCID}
+%     % \and
+%     % \IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
+%     % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%     % \textit{name of organization (of Aff.)}\\
+%     % City, Country \\
+%     % email address or ORCID}
+%     % \and
+%     % \IEEEauthorblockN{6\textsuperscript{th} Given Name Surname}
+%     % \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%     % \textit{name of organization (of Aff.)}\\
+%     % City, Country \\
+%     % email address or ORCID}
+% }
 
 \maketitle
 
@@ -63,14 +75,16 @@ Educação, Meio Ambiente, Cidades Inteligentes, etc.), IA e Ética e Explicabil
     A gestão eficiente de ativos públicos municipais é um desafio logístico para as administrações
     públicas, especialmente quando demanda visitas periódicas para inspeção e manutenção
     desses mesmos ativos distribuídos na cidade. Diante desta problematica,
-    o objetivo geral desse trabalho consiste em identificar uma alternativa capaz de encontrar rotas
+    o objetivo desse trabalho consiste em identificar uma alternativa capaz de encontrar rotas
     eficientes entre os ativos publicos aplicando o Problema do Caixeiro Viajante ao contexto da
     gestão pública municipal. Foi realizada uma revisão sistemática da literatura para identificar
     as principais abordagens metodológicas e algoritmos utilizados em problemas de otimização
-    de rotas em ambientes urbanos. A metodologia foi planejada caracterizando o problema, a iden-
-    tificação de técnicas heurísticas adequadas e a análise comparativa de algoritmos com
-    dados de ativos municipais. No resultado espera-se identificar uma solução viável para otimização de rotas aplicando
-    tecnicas de otimização para redução de custos operacionais e economia de tempo de deslocamento.
+    de rotas em ambientes urbanos. A metodologia foi planejada caracterizando o problema, a
+    identificação de técnicas heurísticas adequadas e a análise comparativa de algoritmos com
+    dados de ativos municipais. No resultado espera-se identificar uma solução viável
+    para identificação de rotas aplicando
+    tecnicas de otimização para redução de custos operacionais e
+    economia de tempo de deslocamento.
     A proposta se alinha ao conceio de cidades inteligentes,
     buscando evidenciar que a otimização de rotas constitui ferramenta estratégica
     para maximizar a eficiência operacional da administração pública,
@@ -86,26 +100,26 @@ Educação, Meio Ambiente, Cidades Inteligentes, etc.), IA e Ética e Explicabil
 % Introduction -----------------------------------------------------------------------
 
 \section{Introduction}
-A gestão e a manutenção de ativos públicos, como praças, escolas
-e equipamentos urbanos distribuídos na cidade, consiste em controlar, inventariar e manter
+A gestão e a manutenção de ativos públicos(como praças, escolas
+e equipamentos urbanos distribuídos na cidade), que consiste em controlar, inventariar e manter
 os recursos e serviços acessíveis à sociedade, impõem um desafio logístico às prefeituras.
 No cenário das cidades inteligentes, que são ambientes urbanos que utilizam Tecnologias
 da Informação e Comunicação (TIC) para melhorar a infraestrutura, os serviços públicos e a
 qualidade de vida dos cidadãos \cite{WEISS2015}, a falta de um planejamento
 de rotas eficiente gera desperdício de combustível, custos
-operacionais elevados e lentidão no atendimento ao cidadão
-um gargalo para municípios menores que enfrentam forte
+operacionais elevados e lentidão no atendimento ao cidadão.
+Gargalos que afetam municípios menores que enfrentam forte
 restrição orçamentária \cite{SANTIAGO2023}. O desafio central reside em encontrar a
 rota mais eficiente que permita às equipes técnicas visitar todos os pontos
 necessários e retornar à origem minimizando a distância e o tempo de
 deslocamento. o objetivo deste trabalho consiste em identificar o Problema
 do Caixeiro Viajante(PCV) e suas variantes
-contextualizando-o à gestão pública, desenvolver
-e avaliar um algoritmo capaz de gerar rotas otimizadas para a visitação de ativos públicos
-por profissionais da administração municipal mais adequado para a realidade das prefeituras.
+contextualizando-o à gestão pública
+e avaliar um algoritmo capaz de gerar rotas otimizadas, para a visitação de ativos públicos
+por profissionais da administração municipal, mais adequado para a realidade das prefeituras.
 Do ponto de vista técnico, o trabalho se propões a resolver
-um problema complexo ($NP$-difícil) através
-de heurísticas para entregar soluções rápidas, viáveis economicamente reduzindo custos e
+um problema complexo ($NP$-difícil)
+para entregar soluções rápidas, viáveis economicamente, reduzindo custos e
 diminuindo o tempo de resposta às demandas da população, tornando
 os serviços urbanos mais ágeis.
 
@@ -226,7 +240,7 @@ foram categorizadas em: Desenvolvimento de Algoritmos (Alg.), para os trabalhos
 \cite{PAZ2023, VILLELA2017, CHAVES2007, SILVA2022};
 Criação de Framework (Frw.), \cite{SILVA2022}; Internet das Coisas (IoT),
 \cite{BARTH2016}; Simulação (Sim.), \cite{SATI2020};
-e Análise de Dados (Dados), \cite{GEORGES2014}. 
+e Análise de Dados (Dados), \cite{GEORGES2014}.
 Já na QP2, destacam-se tanto abordagens
 clássicas e heurísticas próprias (como Algoritmo Genético,
 Colônia de Formigas, GRASP, A*, Dijkstra(Dijks) e Programação Linear)
@@ -306,31 +320,57 @@ otimização adequadas ao problema proposto.
 \section{Metodologia}
 Neste capítulo serão descritos os passos a serem realizados durante o desenvolvimento da
 metodologia adotada neste trabalho.
-
-\subsection{Obtenção das Instancias}
 A modelagem utilizara dados reais do mapeamento de
-um bairro, transformando a malha viária em um grafo $G = (V, E)$. A estrutura
-rerá implementada via listas de adjacência duais, armazenando tanto as distâncias
-métricas reais quanto as coordenadas geográficas (latitude e longitude) via plataforma
-OpenRouteService (baseada no OpenStreetMap). Os ativos a serem visitados são
-selecionados aleatoriamente sobre o grafo, gerando instâncias de teste do Problema
-do Caixeiro Viajante com diferentes níveis de complexidade.
-
-\subsection{Definição dos Algoritmos}
+um bairro, transformando a malha viária em um grafo. A estrutura
+será implementada via listas de adjacência duais, armazenando tanto as distâncias
+métricas reais quanto as coordenadas geográficas (latitude e longitude).
+Os ativos a serem visitados são
+selecionados aleatoriamente sobre o grafo, gerando instâncias de teste do PCV.
 A solução consiste em um algoritmo híbrido que une conceitos de Algoritmos Genéticos
 e Programação Dinâmica.
-
-\subsubsection{Estrutura Geral do Algoritmo}
+% 
 A abordagem adotara um processo iterativo evolucionário
 onde novas rotas candidatas são geradas de forma probabilística.
 Para otimizar o tempo de processamento e evitar recalculações redundantes,
 será integrada uma técnica de memorização (memoization), que
-armazena as distâncias já computadas entre pares de ativos (Algoritmo 1).
+armazena as distâncias já computadas entre pares de ativos.
 E para determinar a distancia entre dois
 ativos serão utilizados metodos de busca em grafos classicos, conforme apresentadas no
 Capítulo 2, sendo eles: Busca em Largura
 (BFS), Busca em Profundidade (DFS), Busca de Custo Uniforme (UCS) e
 Algoritmo A (A Estrela).
+% \subsubsection{Mecanismo de Seleção Probabilística}
+A escolha do próximo ativo a ser visitado na construção da rota será
+através de um mecanismo estocástico de Roleta de Seleção. O algoritmo
+avalia os nós restantes e atribui a eles um peso inversamente proporcional
+à distância do ponto atual; dessa forma, destinos mais próximos ganham maior
+probabilidade de escolha, equilibrando a eficiência local com a exploração de
+novos caminhos no espaço de soluções.
+% 
+Embora funcione sobre o grafo local inicialmente nesse trabalho, a arquitetura permitera integração com
+APIs externas de roteamento como o OpenRouteService. Isso tornando
+a solução escalável e facilmente replicável para qualquer
+município através de coordenadas geográficas.
+% 
+Os experimentos serão padronizados utilizando 30 sementes pseudoaleatórias
+geradas sequencialmente a partir das casas decimais da constante matemática $\pi$.
+% 
+A validação do algoritmo híbrido será baseado em experimentos sistemáticos
+contra algoritmos clássicos de busca em grafos (BFS, DFS, UCS e $A^*$).
+O desempenho é mensurado por duas métricas principais: o Tempo de Execução
+e a Qualidade da Solução (custo total da rota medido em metros).
+% 
+Os testes avaliam cenários de diferentes tamanhos (número de ativos públicos)
+para medir a escalabilidade. Os dados coletados passarão por análise estatística
+descritiva (média, desvio-padrão e extremos) para comprovar se a abordagem
+heurística proposta consegue entregar rotas altamente eficientes em tempo
+computacional viável para a tomada de decisão.
+% 
+As métricas de tempo e distância validarão a eficiência computacional e a
+viabilidade prática da solução. Sua estrutura modular e integrada a APIs
+garante escalabilidade e fácil adaptação para a gestão pública.
+
+
 
 % \begin{algorithm}[t!]
 %     \caption{Melhor Rota}
@@ -350,50 +390,6 @@ Algoritmo A (A Estrela).
 %     \vspace{2mm}
 %     \small{Fonte: Elaborado pelo autor (2025).}
 % \end{algorithm}
-
-\subsubsection{Mecanismo de Seleção Probabilística}
-A escolha do próximo ativo a ser visitado na construção da rota será
-através de um mecanismo estocástico de Roleta de Seleção. O algoritmo
-avalia os nós restantes e atribui a eles um peso inversamente proporcional
-à distância do ponto atual; dessa forma, destinos mais próximos ganham maior
-probabilidade de escolha, equilibrando a eficiência local com a exploração de
-novos caminhos no espaço de soluções.
-
-\subsection{Integração com APIs de Roteamento}
-Embora funcione sobre o grafo local inicialmente nesse trabalho, a arquitetura permitera integração com
-APIs externas de roteamento como o OpenRouteService. Isso tornando
-a solução escalável e facilmente replicável para qualquer
-município através de coordenadas geográficas. Todo o sistema foi desenvolvido
-utilizando a linguagem Python 3.12.3.
-
-\subsection{Padronização dos Experimentos}
-O grafo da malha viária urbana será salvo em arquivos binários,
-dividindo-se em uma lista de
-adjacências para as conexões, e outra para as coordenadas geográficas.
-Para garantir a reprodutibilidade dos testes e evitar vieses, os
-experimentos serão padronizados utilizando 30 sementes pseudoaleatórias
-geradas sequencialmente a partir das casas decimais da constante matemática $\pi$.
-
-\subsection{Análise Comparativa e Experimental}
-A validação do algoritmo híbrido será baseado em experimentos sistemáticos
-contra algoritmos clássicos de busca em grafos (BFS, DFS, UCS e $A^*$).
-O desempenho é mensurado por duas métricas principais: o Tempo de Execução
-e a Qualidade da Solução (custo total da rota medido em metros).
-
-Os testes avaliam cenários de diferentes tamanhos (número de ativos públicos)
-para medir a escalabilidade. Os dados coletados passarão por análise estatística
-descritiva (média, desvio-padrão e extremos) para comprovar se a abordagem
-heurística proposta consegue entregar rotas altamente eficientes em tempo
-computacional viável para a tomada de decisão.
-
-\subsection{Considerações Finais}
-A metodologia propõe um algoritmo híbrido
-testado em malha urbana real, com experimentos controlados por
-sementes de $\pi$ e comparados a buscas clássicas.
-As métricas de tempo e distância validarão a eficiência computacional e a
-viabilidade prática da solução. Sua estrutura modular e integrada a APIs
-garante escalabilidade e fácil adaptação para a gestão pública.
-
 
 % This document is a model and instructions for \LaTeX.
 % Please observe the conference page limits. 
@@ -602,69 +598,70 @@ garante escalabilidade e fácil adaptação para a gestão pública.
 
 \begin{thebibliography}{00}
 
-    \bibitem{SANTIAGO2023} T. E. T. Santiago, ``Cidades inteligentes, gestão urbana e geotecnologias: proposta de city information modeling (CIM) aplicado ao Município de Madre de Deus-BA,'' Dissertação de Mestrado, Universidade Católica do Salvador (UCSal), 2023.
-
     \bibitem{WEISS2015} M. C. Weiss, R. C. Bernardes, and F. L. Consoni, ``Cidades inteligentes como nova prática para o gerenciamento dos serviços e infraestruturas urbanos: a experiência da cidade de Porto Alegre,'' \textit{Urbe. Revista Brasileira de Gestão Urbana}, vol. 7, pp. 310--324, 2015.
 
-    \bibitem{STORCK2017} C. Storck, E. Sales, L. Zárate, and F. Figueiredo, ``Proposta de um framework baseado em mineração de dados para redes 5g,'' \textit{Revista Eletrônica de Sistemas de Informação}, vol. 16, 2017. [Online]. Available: https://www.periodicosibepes.org.br/index.php/reinfo/article/view/2488
-
-    \bibitem{OLIVEIRA2020} V. A. T. Oliveira, ``Gestão de operações de serviços de emergência no contexto de cidades inteligentes e sustentáveis: o caso da Polícia Militar do Paraná,'' Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, 2020.
+    \bibitem{SANTIAGO2023} T. E. T. Santiago, ``Cidades inteligentes, gestão urbana e geotecnologias: proposta de city information modeling (CIM) aplicado ao Município de Madre de Deus-BA,'' Dissertação de Mestrado, Universidade Católica do Salvador (UCSal), 2023.
 
     \bibitem{SANTOS2019} L. Santos, L. Nascimento, and S. Nunes, ``Reclamando app: um aplicativo para auxiliar na reivindicação de problemáticas urbanas,'' in \textit{Anais da XIX Escola Regional de Computação Bahia, Alagoas e Sergipe}, Porto Alegre, RS, Brasil: SBC, 2019, pp. 184--189. [Online]. Available: https://sol.sbc.org.br/index.php/erbase/article/view/8976
 
+    \bibitem{STORCK2017} C. Storck, E. Sales, L. Zárate, and F. Figueiredo, ``Proposta de um framework baseado em mineração de dados para redes 5g,'' \textit{Revista Eletrônica de Sistemas de Informação}, vol. 16, 2017. [Online]. Available: https://www.periodicosibepes.org.br/index.php/reinfo/article/view/2488
+
     \bibitem{CORMEN2012} T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, \textit{Algoritmos: teoria e prática}, 3rd ed. Rio de Janeiro: Elsevier, 2012.
 
-
-
-
-    \bibitem{AMORIM2019} M. Amorim, J. Venceslau, P. Carvalho, N. Cacho, F. Lopes, E. Adachi, and J. Lima, ``Assistente de cena de crime: Solução para auxílio à investigação de homicídios,'' in \textit{Anais do II Workshop Brasileiro de Cidades Inteligentes}, Porto Alegre, RS, Brasil: SBC, 2019. [Online]. Available: https://sol.sbc.org.br/index.php/wbci/article/view/6747
-
-    \bibitem{ANDRADE2016} L. H. de Andrade, B. Amorim, M. de Oliveira, A. L. Alves, J. N. de Abrante, D. Leite, J. H. Rocha, and C. Baptista, ``Deuzikachico: o poder da agi no monitoramento e combate de epidemias como a de dengue, zika e chikungunya,'' in \textit{Anais do XII Simpósio Brasileiro de Sistemas de Informação}, Porto Alegre, RS, Brasil: SBC, 2016, pp. 377--384. [Online]. Available: https://sol.sbc.org.br/index.php/sbsi/article/view/5985
-
-    \bibitem{BOTELHO2019} P. Botelho, A. Borges, and G. Alves, ``Proposta de implantação de um sistema ciberfísico para um smart parking baseado em agentes inteligentes,'' in \textit{Anais do XIII Workshop-Escola de Sistemas de Agentes, seus Ambientes e Aplicações}, Porto Alegre, RS, Brasil: SBC, 2019, pp. 259--264. [Online]. Available: https://sol.sbc.org.br/index.php/wesaac/article/view/33361
-
-    \bibitem{CARVALHO2024} M. D. S. d. Carvalho, ``Smart cities: uso de sensores e dados secundários para cidades inteligentes centradas no cidadão,'' Dissertação de Mestrado, Universidade de Caxias do Sul, Caxias do Sul, Brasil, 2024.
-
-    \bibitem{CASTRO2020} L. Castro, F. Manoel, V. Jesus, C. Pantoja, A. Borges, and G. Alves, ``Integrando sistemas multi-agentes embarcados, simulação urbana e aplicações de IoT,'' in \textit{Anais do XIV Workshop-Escola de Sistemas de Agentes, seus Ambientes e Aplicações}, Porto Alegre, RS, Brasil: SBC, 2020, pp. 165--176. [Online]. Available: https://sol.sbc.org.br/index.php/wesaac/article/view/33389
-
-    \bibitem{COSTA2023} I. S. Costa, ``Proposição de elements para uso de sistemas inteligentes de transportes para potencialização de intervenções estruturantes no sistema viário de cidades de médio porte: uma proposta para o novo anel viário de Bom Despacho-MG,'' Trabalho de Conclusão de Curso (Bacharelado), Universidade Federal do Tocantins, Ouro Preto - MG, Brasil, 2023.
-
-    \bibitem{DIAS2019} C. Dias, F. Lopes, and J. Leite, ``Smartnode dashboard: um framework front-end baseado em node-red para criação de city dashboards,'' in \textit{Anais do II Workshop Brasileiro de Cidades Inteligentes}, Porto Alegre, RS, Brasil: SBC, 2019. [Online]. Available: https://sol.sbc.org.br/index.php/wbci/article/view/6744
-
-    \bibitem{KITCHENHAM2009} B. Kitchenham, O. P. Brereton, D. Budgen, M. Turner, J. Bailey, and S. Linkman, ``Systematic literature reviews in software engineering – a systematic literature review,'' \textit{Information and Software Technology}, vol. 51, no. 1, pp. 7--15, 2009. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0950584908001390
-
-    \bibitem{MELONIO2021} A. C. C. Melonio, ``Smart São Paulo: um estudo da mobilidade urbana sob a ótica de Machine Learning e aspectos espaço-temporais,'' Dissertação de Mestrado, Universidade Presbiteriana Mackenzie, 2021.
-
-
-    \bibitem{PINTO2025} N. R. Pinto, ``Desenvolvimento de uma virtual test bed e digital twin para treinamento de veículos autônomos,'' Trabalho de Conclusão de Curso (Bacharelado), Universidade Estadual Paulista (Unesp), Sorocaba - SP, Brasil, 2025.
-
-    \bibitem{RUSSELL2013} S. J. Russell and P. Norvig, \textit{Inteligência artificial}, 3rd ed. Rio de Janeiro: Elsevier, 2013.
-
-    \bibitem{GIFFINGER2007} R. Giffinger, C. Fertner, H. Kramar, R. Kalasek, N. Pichler-Milanović, and E. Meijers, ``Smart cities: Ranking of European medium-sized cities,'' \textit{Centre of Regional Science, Vienna University of Technology}, Vienna, Austria, 2007.
-
-    \bibitem{ALBINO2015} V. Albino, U. Berardi, and R. M. Dangelico, ``Smart cities: Definitions, dimensions, performance, and initiatives,'' \textit{Journal of Urban Technology}, vol. 22, no. 1, pp. 3--21, 2015.
-
-    \bibitem{NAM2011} T. Nam and T. A. Pardo, ``Conceptualizing smart city with dimensions of technology, people, and institutions,'' in \textit{Proc. 12th Annu. Int. Digital Government Research Conf.}, 2011, pp. 282--291.
-
-    \bibitem{CHOURABI2012} H. Chourabi \textit{et al.}, ``Understanding smart cities: An integrative framework,'' in \textit{2012 45th Hawaii International Conference on System Sciences}, 2012, pp. 2289--2297.
-
-    \bibitem{BATTY2012} M. Batty \textit{et al.}, ``Smart cities of the future,'' \textit{The European Physical Journal Special Topics}, vol. 214, no. 1, pp. 481--518, 2012.
-
-    \bibitem{SILVA2024} M. O. Silva, ``Desenvolvimento de uma aplicação gráfica para resolução de problemas de roteamento de veículos,'' Trabalho de Conclusão de Curso (Bacharelado), Universidade Federal da Paraíba, João Pessoa - PB, Brasil, 2024.
-
     \bibitem{PAZ2023} F. A. Paz, ``Planejamento de Rotas Veiculares e Otimização de Mobilidade Urbana Utilizando Algoritmo Bioinspirado e Paralelo,'' Proposta de Dissertação de Mestrado, Universidade Federal de Sergipe, São Cristóvão -- SE, Brasil, 2023.
-
-    \bibitem{BARTH2016} M. J. Barth, ``Otimização multi-nível para projeto de redes híbridas (ópticas e sem fio) para implementação de cidades inteligentes,'' Dissertação de Mestrado, Universidade do Vale do Rio dos Sinos - UNISINOS, São Leopoldo - RS, Brasil, 2016.
 
     \bibitem{SILVA2022} E. C. Silva, D. R. Lima, L. C. Santos, and F. D. V. Silva, ``Uso da Ferramenta OR-Tools na Geração de Rotas Otimizadas em Agência dos Correios Utilizando Algoritmos para o Problema do Caixeiro Viajante,'' in \textit{Anais de evento acadêmico}, IFCE - Campus Aracati, Aracati - CE, Brasil, 2022.
 
     \bibitem{VILLELA2017} A. R. Villela da Silva and L. S. Ochi, ``Um Algoritmo Evolutivo para o Problema do Caixeiro Alugador,'' \textit{Proceeding Series of the Brazilian Society of Applied and Computational Mathematics}, vol. 5, no. 1, pp. 460--467, 2017.
 
+    \bibitem{CHAVES2007} A. A. Chaves, F. L. Biajoli, O. M. Mine, and M. J. F. Souza, ``Metaheurísticas híbridas para resolução do problema do caixeiro viajante com coleta de prêmios,'' \textit{Produção}, vol. 17, no. 2, pp. 263--272, 2007.
+
+    \bibitem{BARTH2016} M. J. Barth, ``Otimização multi-nível para projeto de redes híbridas (ópticas e sem fio) para implementação de cidades inteligentes,'' Dissertação de Mestrado, Universidade do Vale do Rio dos Sinos - UNISINOS, São Leopoldo - RS, Brasil, 2016.
+
     \bibitem{SATI2020} T. N. Sati, C. T. Scarpin, J. E. Pécora Junior, and R. M. Z. Lopes, ``Diferentes formulações de programação linear inteira para a roteirização no transporte de funcionários,'' \textit{Produção}, vol. 17, no. 2, pp. 263--272, 2020.
 
     \bibitem{GEORGES2014} M. R. R. Georges, ``Rotas solidárias: um estudo das rotas de coleta de materiais recicláveis numa cooperativa popular de coleta e seleção de recicláveis,'' \textit{Revista Gestão Industrial}, vol. 10, no. 1, pp. 1--21, 2014.
 
-    \bibitem{CHAVES2007} A. A. Chaves, F. L. Biajoli, O. M. Mine, and M. J. F. Souza, ``Metaheurísticas híbridas para resolução do problema do caixeiro viajante com coleta de prêmios,'' \textit{Produção}, vol. 17, no. 2, pp. 263--272, 2007.
+    \bibitem{SILVA2024} M. O. Silva, ``Desenvolvimento de uma aplicação gráfica para resolução de problemas de roteamento de veículos,'' Trabalho de Conclusão de Curso (Bacharelado), Universidade Federal da Paraíba, João Pessoa - PB, Brasil, 2024.
+
+
+
+    % \bibitem{OLIVEIRA2020} V. A. T. Oliveira, ``Gestão de operações de serviços de emergência no contexto de cidades inteligentes e sustentáveis: o caso da Polícia Militar do Paraná,'' Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, 2020.
+
+    % \bibitem{AMORIM2019} M. Amorim, J. Venceslau, P. Carvalho, N. Cacho, F. Lopes, E. Adachi, and J. Lima, ``Assistente de cena de crime: Solução para auxílio à investigação de homicídios,'' in \textit{Anais do II Workshop Brasileiro de Cidades Inteligentes}, Porto Alegre, RS, Brasil: SBC, 2019. [Online]. Available: https://sol.sbc.org.br/index.php/wbci/article/view/6747
+
+    % \bibitem{ANDRADE2016} L. H. de Andrade, B. Amorim, M. de Oliveira, A. L. Alves, J. N. de Abrante, D. Leite, J. H. Rocha, and C. Baptista, ``Deuzikachico: o poder da agi no monitoramento e combate de epidemias como a de dengue, zika e chikungunya,'' in \textit{Anais do XII Simpósio Brasileiro de Sistemas de Informação}, Porto Alegre, RS, Brasil: SBC, 2016, pp. 377--384. [Online]. Available: https://sol.sbc.org.br/index.php/sbsi/article/view/5985
+
+    % \bibitem{BOTELHO2019} P. Botelho, A. Borges, and G. Alves, ``Proposta de implantação de um sistema ciberfísico para um smart parking baseado em agentes inteligentes,'' in \textit{Anais do XIII Workshop-Escola de Sistemas de Agentes, seus Ambientes e Aplicações}, Porto Alegre, RS, Brasil: SBC, 2019, pp. 259--264. [Online]. Available: https://sol.sbc.org.br/index.php/wesaac/article/view/33361
+
+    % \bibitem{CARVALHO2024} M. D. S. d. Carvalho, ``Smart cities: uso de sensores e dados secundários para cidades inteligentes centradas no cidadão,'' Dissertação de Mestrado, Universidade de Caxias do Sul, Caxias do Sul, Brasil, 2024.
+
+    % \bibitem{CASTRO2020} L. Castro, F. Manoel, V. Jesus, C. Pantoja, A. Borges, and G. Alves, ``Integrando sistemas multi-agentes embarcados, simulação urbana e aplicações de IoT,'' in \textit{Anais do XIV Workshop-Escola de Sistemas de Agentes, seus Ambientes e Aplicações}, Porto Alegre, RS, Brasil: SBC, 2020, pp. 165--176. [Online]. Available: https://sol.sbc.org.br/index.php/wesaac/article/view/33389
+
+    % \bibitem{COSTA2023} I. S. Costa, ``Proposição de elements para uso de sistemas inteligentes de transportes para potencialização de intervenções estruturantes no sistema viário de cidades de médio porte: uma proposta para o novo anel viário de Bom Despacho-MG,'' Trabalho de Conclusão de Curso (Bacharelado), Universidade Federal do Tocantins, Ouro Preto - MG, Brasil, 2023.
+
+    % \bibitem{DIAS2019} C. Dias, F. Lopes, and J. Leite, ``Smartnode dashboard: um framework front-end baseado em node-red para criação de city dashboards,'' in \textit{Anais do II Workshop Brasileiro de Cidades Inteligentes}, Porto Alegre, RS, Brasil: SBC, 2019. [Online]. Available: https://sol.sbc.org.br/index.php/wbci/article/view/6744
+
+    % \bibitem{KITCHENHAM2009} B. Kitchenham, O. P. Brereton, D. Budgen, M. Turner, J. Bailey, and S. Linkman, ``Systematic literature reviews in software engineering – a systematic literature review,'' \textit{Information and Software Technology}, vol. 51, no. 1, pp. 7--15, 2009. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0950584908001390
+
+    % \bibitem{MELONIO2021} A. C. C. Melonio, ``Smart São Paulo: um estudo da mobilidade urbana sob a ótica de Machine Learning e aspectos espaço-temporais,'' Dissertação de Mestrado, Universidade Presbiteriana Mackenzie, 2021.
+
+    % \bibitem{PINTO2025} N. R. Pinto, ``Desenvolvimento de uma virtual test bed e digital twin para treinamento de veículos autônomos,'' Trabalho de Conclusão de Curso (Bacharelado), Universidade Estadual Paulista (Unesp), Sorocaba - SP, Brasil, 2025.
+
+    % \bibitem{RUSSELL2013} S. J. Russell and P. Norvig, \textit{Inteligência artificial}, 3rd ed. Rio de Janeiro: Elsevier, 2013.
+
+    % \bibitem{GIFFINGER2007} R. Giffinger, C. Fertner, H. Kramar, R. Kalasek, N. Pichler-Milanović, and E. Meijers, ``Smart cities: Ranking of European medium-sized cities,'' \textit{Centre of Regional Science, Vienna University of Technology}, Vienna, Austria, 2007.
+
+    % \bibitem{ALBINO2015} V. Albino, U. Berardi, and R. M. Dangelico, ``Smart cities: Definitions, dimensions, performance, and initiatives,'' \textit{Journal of Urban Technology}, vol. 22, no. 1, pp. 3--21, 2015.
+
+    % \bibitem{NAM2011} T. Nam and T. A. Pardo, ``Conceptualizing smart city with dimensions of technology, people, and institutions,'' in \textit{Proc. 12th Annu. Int. Digital Government Research Conf.}, 2011, pp. 282--291.
+
+    % \bibitem{CHOURABI2012} H. Chourabi \textit{et al.}, ``Understanding smart cities: An integrative framework,'' in \textit{2012 45th Hawaii International Conference on System Sciences}, 2012, pp. 2289--2297.
+
+    % \bibitem{BATTY2012} M. Batty \textit{et al.}, ``Smart cities of the future,'' \textit{The European Physical Journal Special Topics}, vol. 214, no. 1, pp. 481--518, 2012.
+
+    
+
 
 \end{thebibliography}
 % \vspace{12pt}

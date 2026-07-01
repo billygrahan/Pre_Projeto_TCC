@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1782928072.25365 "/home/billygrahan/Pre_Projeto_TCC/conference_101719.tex" "build/conference_101719.pdf" "conference_101719" 1782928072.88541 0
+["pdflatex"] 1782932733.18518 "/home/billygrahan/Pre_Projeto_TCC/conference_101719.tex" "build/conference_101719.pdf" "conference_101719" 1782932734.08462 0
   "/etc/texmf/web2c/texmf.cnf" 1765234441.98296 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/billygrahan/Pre_Projeto_TCC/conference_101719.tex" 1782928071.27248 43077 7226fe6a4f064eaea025033235d595e5 ""
+  "/home/billygrahan/Pre_Projeto_TCC/conference_101719.tex" 1782932731.89559 42743 e225a802a02229f63d83c0c8ccec2276 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -28,7 +28,6 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
-  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1136849748 44729 811d6c62865936705a31c797a1d5dada ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb" 1136849748 44656 0cbca70e0534538582128f6b54593cca ""
@@ -75,8 +74,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1765234465.90862 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1765234597 8215137 a3d61247551f9ccbe461e73e059639c4 ""
   "IEEEtran.cls" 1782436192.27826 281995 6e87d17cc790bfd345d9b49eed602525 ""
-  "build/conference_101719.aux" 1782928072.80173 3219 cbd9fae35e333ea5c396152087d98020 "pdflatex"
-  "conference_101719.tex" 1782928071.27248 43077 7226fe6a4f064eaea025033235d595e5 ""
+  "build/conference_101719.aux" 1782932733.9677 1713 50144f131b990a535a569b9638e25b1e "pdflatex"
+  "conference_101719.tex" 1782932731.89559 42743 e225a802a02229f63d83c0c8ccec2276 ""
   (generated)
   "build/conference_101719.aux"
   "build/conference_101719.log"
