@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1782957281.16923 "/home/billygrahan/Pre_Projeto_TCC/conference_101719.tex" "build/conference_101719.pdf" "conference_101719" 1782957281.78058 0
+["pdflatex"] 1782957417.03446 "/home/billygrahan/Pre_Projeto_TCC/conference_101719.tex" "build/conference_101719.pdf" "conference_101719" 1782957417.59749 0
   "/etc/texmf/web2c/texmf.cnf" 1765234441.98296 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/billygrahan/Pre_Projeto_TCC/conference_101719.tex" 1782957280.91205 41473 cb1c9ca35d88de55dd28e9e1620adf20 ""
+  "/home/billygrahan/Pre_Projeto_TCC/conference_101719.tex" 1782957416.80639 41431 7aad29bf15897a7f2816faf5b3b73dfc ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1136768653 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -82,8 +82,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1765234465.90862 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1765234597 8215137 a3d61247551f9ccbe461e73e059639c4 ""
   "IEEEtran.cls" 1782945940.62564 282220 73522b2264d7a86b4fa7fcd7b5031caf ""
-  "build/conference_101719.aux" 1782957281.70405 1345 218e826406b73e7a27abea6c94311fc1 "pdflatex"
-  "conference_101719.tex" 1782957280.91205 41473 cb1c9ca35d88de55dd28e9e1620adf20 ""
+  "build/conference_101719.aux" 1782957417.52428 1345 218e826406b73e7a27abea6c94311fc1 "pdflatex"
+  "conference_101719.tex" 1782957416.80639 41431 7aad29bf15897a7f2816faf5b3b73dfc ""
   (generated)
   "build/conference_101719.aux"
   "build/conference_101719.log"
