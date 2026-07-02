@@ -10,8 +10,17 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{setspace}
+\setstretch{0.85} % diminui o espaçamento entre linhas para 95% do padrão
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\makeatletter
+% Reduz espaço acima e abaixo do bloco de autores
+\def\@IEEEauthorblockconfadjspace{-0.6cm}
+\def\@IEEEauthorblockconfadjspacebelow{-1cm}
+\makeatother
+
+
 \begin{document}
 
 % \title{Algoritmo de busca para Identificação de rotas entre ativos na zeladoria pública no contexto
@@ -20,54 +29,53 @@
 % Educação, Meio Ambiente, Cidades Inteligentes, etc.), IA e Ética e Explicabilidade em Inteligência Artificial}
 % \thanks{}
 % }
-\title{\small\bfseries ALGORITMO DE BUSCA PARA IDENTIFICAÇÃO DE ROTAS ENTRE ATIVOS NA ZELADORIA PÚBLICA NO CONTEXTO DE CIDADES INTELIGENTES}
-% \renewcommand{\IEEEauthorblockN}[1]{#1\vspace{-0.8cm}}
-% \author{
+\title{\small\bfseries ALGORITMOS DE BUSCA PARA IDENTIFICAÇÃO DE ROTAS ENTRE ATIVOS NA ZELADORIA PÚBLICA NO CONTEXTO DE CIDADES INTELIGENTES}
 
-%     \IEEEauthorblockN{\small\bfseries Billy Grahan Alves Rodrigues}
-%     % \IEEEauthorblockA{Campus de Russas \\
-%     %     Universidade Federal do Ceará (UFC) \\
-%     %     Email: seu.email@engenharia.ufc.br}
-%     % \vspace{-0.8cm} % <-- ESSE COMANDO VAI PUXAR O TEXTO PARA CIMA, ECONOMIZANDO ESPAÇO
-% }
+\author{
+    \IEEEauthorblockN{\bfseries Billy Grahan Alves Rodrigues}
+    % \IEEEauthorblockA{Campus de Russas \\
+    %     Universidade Federal do Ceará (UFC) \\
+    %     Email: seu.email@engenharia.ufc.br}
+    \vspace{-4cm} % <-- ESSE COMANDO VAI PUXAR O TEXTO PARA CIMA, ECONOMIZANDO ESPAÇO
+}
 
-\IEEEaftertitletext{\vspace{-2.2cm}} % <-- este comando funciona!
+% \IEEEaftertitletext{\vspace{-1.2cm}} % <-- este comando funciona!
 \maketitle
 
 \begin{abstract}
     A gestão eficiente de ativos públicos municipais é um desafio logístico para as administrações
-    públicas, especialmente quando demanda visitas periódicas para inspeção e manutenção
-    desses mesmos ativos distribuídos na cidade. Diante desta problematica,
-    o objetivo desse trabalho consiste em identificar uma alternativa capaz de encontrar rotas
-    eficientes entre os ativos públicos no contexto da
-    gestão pública municipal. Foi realizada uma revisão sistemática da literatura para identificar
-    as principais abordagens metodológicas e algoritmos utilizados em problemas de otimização
-    de rotas em ambientes urbanos. A metodologia foi planejada, caracterizando o problema, a
-    identificação de técnicas heurísticas adequadas e a análise comparativa de algoritmos com
-    dados de ativos municipais. No resultado, espera-se identificar uma solução
-    para identificação de rotas, aplicando
+    públicas, especialmente quando demanda visitas periódicas para inspeção e manutenção
+    desses mesmos ativos distribuídos na cidade. Diante desta problematica,
+    o objetivo desse trabalho consiste em identificar uma alternativa capaz de encontrar rotas
+    eficientes entre os ativos públicos no contexto da
+    gestão pública municipal. Foi realizada uma revisão sistemática da literatura para identificar
+    as principais abordagens metodológicas e algoritmos utilizados em problemas de otimização
+    de rotas em ambientes urbanos. A metodologia foi planejada, caracterizando o problema, a
+    identificação de técnicas heurísticas adequadas e a análise comparativa de algoritmos com
+    dados de ativos municipais. No resultado, espera-se identificar uma solução
+    para identificação de rotas, aplicando
     técnicas de otimização para redução de custos operacionais e
-    economia de tempo de deslocamento.
-    A proposta se alinha ao conceito de cidades inteligentes,
-    buscando evidenciar que a otimização de rotas constitui ferramenta estratégica
-    para melhorar a eficiência operacional da administração pública,
-    promovendo agilidade no atendimento às demandas de zeladoria urbana e
-    fortalecendo a qualidade dos serviços municipais mesmo com restrições orçamentárias.
+    economia de tempo de deslocamento.
+    A proposta se alinha ao conceito de cidades inteligentes,
+    buscando evidenciar que a otimização de rotas constitui ferramenta estratégica
+    para melhorar a eficiência operacional da administração pública,
+    promovendo agilidade no atendimento às demandas de zeladoria urbana e
+    fortalecendo a qualidade dos serviços municipais mesmo com restrições orçamentárias.
 \end{abstract}
 
 \begin{IEEEkeywords}
     Otimização de rotas. Gestão de ativos públicos. Heurísticas. Cidades inteligentes.
 \end{IEEEkeywords}
 
+\vspace{-0.3cm}
 % Introduction -----------------------------------------------------------------------
-
 \section{Introdução}
 A gestão e a manutenção de ativos públicos, que consiste em controlar, inventariar e manter
 os recursos e serviços acessíveis à sociedade impõem um desafio logístico às prefeituras.
 No cenário das cidades inteligentes, que são ambientes urbanos que utilizam Tecnologias
 da Informação e Comunicação (TIC), a falta de um planejamento
 de rotas eficientes geram custos
-operacionais elevados. O desafio reside em encontrar uma
+operacionais elevados \cite{SANTIAGO2023}. O desafio reside em encontrar uma
 rota eficiente que permita às equipes técnicas visitar todos os pontos
 necessários e retornar à origem minimizando a distância e o tempo de
 deslocamento. o objetivo deste trabalho consiste em identificar
@@ -106,6 +114,7 @@ os serviços urbanos mais ágeis.
 
 % Fundamentação Teórica -----------------------------------------------------------------------
 
+\vspace{-0.25cm}
 \section{Fundamentação Teórica}
 % A zeladoria urbana aborda um conjunto de atividades que visam manter em boas
 % condições de uso os ambientes públicos para a população, realizando serviços essenciais de
@@ -190,7 +199,7 @@ a busca pelo caminho mínimo \cite{CORMEN2012}.
 % \end{itemize}
 
 % Revisão de Literatura -----------------------------------------------------------------------
-
+\vspace{-0.2cm}
 \section{Revisão de Literatura}
 Diante do objetivo do trabalho, foi necessária a realização de uma revisão sistemática
 da literatura que consiste em:
@@ -236,18 +245,17 @@ A tabela \ref{tab:mapeamento_qp} apresenta o mapeamento dos trabalhos selecionad
 % trabalho, orientando tanto a escolha da abordagem metodológica quanto a seleção de técnicas de
 % otimização adequadas ao problema proposto.
 
-\vspace{-0.6cm}
 \begin{table}[htbp]
     \caption{Mapeamento dos Trabalhos Selecionados (QP1 e QP2)}
-    \vspace{-0.9cm}
+    \vspace{-0.7cm}
     \begin{center}
-        \begin{tabular}{|p{1cm}|p{3cm}|p{3.7cm}|}
+        \begin{tabular}{|p{1.5cm}|p{2.8cm}|p{3.3cm}|}
             \hline
             \textbf{Trabalho}  & \textbf{QP1 (Estratégia)}     & \textbf{QP2 (Algoritmos / Ferramentas)}                      \\
             \hline
             \cite{PAZ2023}     & Desenvolvimento de Algoritmos & Algoritmo Genético, Colônia de Formigas, GRASP, A*, Dijkstra \\
             \hline
-            \cite{SILVA2024}   & Criação de \textit{Framework}  & APIs externas                                                \\
+            \cite{SILVA2024}   & Criação de \textit{Framework} & APIs externas                                                \\
             \hline
             \cite{SILVA2022}   & Desenvolvimento de Algoritmos & Ferramentas de código aberto                                 \\
             \hline
@@ -260,8 +268,9 @@ A tabela \ref{tab:mapeamento_qp} apresenta o mapeamento dos trabalhos selecionad
         \end{tabular}
         \label{tab:mapeamento_qp}
     \end{center}
+    \vspace{-0.7cm}
 \end{table}
-\vspace{-0.65cm}
+
 
 
 % Nesse Capítulo serão revisados os trabalhos focados em otimização de rotas e
@@ -297,7 +306,7 @@ A tabela \ref{tab:mapeamento_qp} apresenta o mapeamento dos trabalhos selecionad
 % que será proposto para a zeladoria pública.
 
 %  Metodologia -----------------------------------------------------------------------
-
+\vspace{-0.2cm}
 \section{Metodologia}
 A modelagem utilizará dados reais do mapeamento de
 um bairro, transformando a malha viária em um grafo. A estrutura
@@ -305,7 +314,7 @@ será implementada via listas de adjacência duais, armazenando tanto as distân
 métricas reais quanto às coordenadas geográficas.
 Os ativos a serem visitados são
 selecionados aleatoriamente sobre o grafo, gerando instâncias de teste do PCV.
-A solução consiste em um algoritmo híbrido que une conceitos de Algoritmos Genéticos
+A solução consiste em um algoritmo híbrido que une conceitos de AG
 e Programação Dinâmica.
 A abordagem adotará um processo iterativo evolucionário
 onde novas rotas candidatas são geradas de forma probabilística.
@@ -564,9 +573,9 @@ garante escalabilidade e fácil adaptação para a gestão pública.
 
 % For papers published in translation journals, please give the English 
 % citation first, followed by the original foreign-language citation \cite{b6}.
-
+\vspace{-0.3cm}
 \begin{thebibliography}{00}
-
+    \fontsize{11.5}{10}\selectfont
     \bibitem{SANTOS2019} L. Santos, L. Nascimento, and S. Nunes,
     ``Reclamando app: um aplicativo para auxiliar na reivindicação
     de problemáticas urbanas,'' in \textit{Anais da XIX Escola
@@ -583,10 +592,10 @@ garante escalabilidade e fácil adaptação para a gestão pública.
     % serviços e infraestruturas urbanos: a experiência da cidade de Porto
     % Alegre,'' \textit{Urbe. Revista Brasileira de Gestão Urbana}, vol. 7, pp. 310--324, 2015.
 
-    % \bibitem{SANTIAGO2023} T. E. T. Santiago, ``Cidades inteligentes,
-    % gestão urbana e geotecnologias: proposta de city information modeling
-    % (CIM) aplicado ao Município de Madre de Deus-BA,'' Dissertação de Mestrado,
-    % Universidade Católica do Salvador (UCSal), 2023.
+    \bibitem{SANTIAGO2023} T. E. T. Santiago, ``Cidades inteligentes,
+    gestão urbana e geotecnologias: proposta de city information modeling
+    (CIM) aplicado ao Município de Madre de Deus-BA,'' Dissertação de Mestrado,
+    Universidade Católica do Salvador (UCSal), 2023.
 
 
 
@@ -601,7 +610,7 @@ garante escalabilidade e fácil adaptação para a gestão pública.
 
     \bibitem{SILVA2024} M. O. Silva, ``Desenvolvimento de uma aplicação
     gráfica para resolução de problemas de roteamento de veículos,''
-    Trabalho de Conclusão de Curso (Bacharelado), Universidade Federal
+    Monografia (Bacharelado), Universidade Federal
     da Paraíba, João Pessoa - PB, Brasil, 2024.
 
     \bibitem{SILVA2022} E. C. Silva, D. R. Lima, L. C. Santos, and F.
@@ -622,7 +631,7 @@ garante escalabilidade e fácil adaptação para a gestão pública.
 
     \bibitem{BARTH2016} M. J. Barth, ``Otimização multi-nível para
     projeto de redes híbridas (ópticas e sem fio) para implementação
-    de cidades inteligentes,'' Dissertação de Mestrado, Universidade do
+    de cidades inteligentes,'' Mestrado, Universidade do
     Vale do Rio dos Sinos - UNISINOS, São Leopoldo - RS, Brasil, 2016.
 
     \bibitem{SATI2020} T. N. Sati, \textit{et al.}, ``Diferentes formulações de programação linear
