@@ -218,6 +218,12 @@
 \def\IEEEtransversionmajor{1}
 \def\IEEEtransversionminor{8}
 
+\usepackage[brazil]{babel}   % ou [portuguese]
+\usepackage[utf8]{inputenc}  % para acentuação
+\usepackage[T1]{fontenc}     % para correta hifenização
+
+
+
 
 % hook to allow easy changeover to IEEEtran.cls/tools.sty error reporting
 \def\@IEEEclspkgerror{\ClassError{IEEEtran}}
@@ -606,6 +612,7 @@
 \newdimen\@IEEEnormalsizeunitybaselineskip
 \@IEEEnormalsizeunitybaselineskip\baselineskip
 
+% \documentclass[conference,12pt]{IEEEtran}
 
 
 %% ******* WARNING! *******
